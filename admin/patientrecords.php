@@ -79,11 +79,15 @@ include "../auth/conn.php";
         </div>
       </div>
       <div class="child content">
-        <a class="addrecord" href="./addpatientrecord.php">Add Patient Record</a>
         <div class="search-container">
           <form method="get" action="">
-            <input type="text" name="query" placeholder="Search...">
-            <button type="submit">Search</button>
+            <div class="search-patient">
+              <input type="text" name="query" placeholder="Search...">
+              <span class="icon">
+                <i class="uil uil-search search-icon"></i>
+              </span>
+              <i class="uil uil-times close-icon"></i>
+            </div>
           </form>
         </div>
         <main class="table">
@@ -181,6 +185,15 @@ include "../auth/conn.php";
     </div>
 
   </div>
+
+  <script>
+    let inputBox = document.querySelector(".search-patient"),
+      searchIcon = document.querySelector(".icon"),
+      closeIcon = document.querySelector(".close-icon");
+
+    searchIcon.addEventListener("click", () => inputBox.classList.add("open"));
+    closeIcon.addEventListener("click", () => inputBox.classList.remove("open"));
+  </script>
 
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <script src="../button.js"></script>

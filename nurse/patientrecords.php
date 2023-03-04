@@ -73,7 +73,6 @@ include "../auth/conn.php";
         </div>
       </div>
       <div class="child content">
-        <a class="addrecord" href="./addpatientrecord.php">Add Patient Record</a>
         <div class="search-container">
           <form method="get" action="">
             <input type="text" name="query" placeholder="Search...">
